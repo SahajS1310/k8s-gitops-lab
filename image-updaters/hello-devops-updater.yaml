@@ -1,0 +1,19 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: hello-devops-updater
+  namespace: argocd
+
+spec:
+  writeBackConfig:
+    method: git
+
+  applicationRefs:
+    - namePattern: hello-devops-app
+
+      images:
+        - alias: hello
+          imageName: ghcr.io/sahajs1310/hello-devops-app
+
+          commonUpdateSettings:
+            updateStrategy: digest
