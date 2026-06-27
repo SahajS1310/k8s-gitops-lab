@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - ghcr.io/sahajs1310/hello-devops-app:latest@sha256:a16f743ce8ca869f3b49340d059aed651a5a15b953a9fe753abb8ed95b460b91
