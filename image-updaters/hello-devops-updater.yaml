@@ -13,7 +13,8 @@ spec:
 
       images:
         - alias: hello
-          imageName: ghcr.io/sahajs1310/hello-devops-app
+          imageName: ghcr.io/sahajs1310/hello-devops-app:2.x
 
           commonUpdateSettings:
-            updateStrategy: digest
+            updateStrategy: semver
+            allowTags: "regexp:^v?[0-9]+\\.[0-9]+\\.[0-9]+$"
